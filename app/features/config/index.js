@@ -13,13 +13,13 @@ export default {
     /**
      * Application name.
      */
-    appName: 'CREWSA',
+    appName: 'crewsa-meet',
 
     /**
     * The prefix for application protocol.
     * You will also need to replace this in package.json.
     */
-    appProtocolPrefix: 'CREW-meet',
+    appProtocolPrefix: 'crewsa-meet',
 
     /**
      * The default server URL of Jitsi Meet Deployment that will be used.

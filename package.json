@@ -1,9 +1,9 @@
 {
-  "name": "jitsi-meet-electron",
+  "name": "crewsa",
   "version": "2.8.11",
   "description": "Electron application for CREWSA",
   "main": "./build/main.js",
-  "productName": "CREWSA",
+  "productName": "crewsa-meet",
   "scripts": {
     "start": "webpack --config ./webpack.main.js --mode development && concurrently \"npm:watch\" \"electron ./build/main.js\"",
     "clean": "rm -rf node_modules build dist",
@@ -18,7 +18,7 @@
   },
   "build": {
     "appId": "org.jitsi.jitsi-meet",
-    "productName": "CREWSA",
+    "productName": "crewsa-meet",
     "generateUpdatesFilesForAllChannels": true,
     "afterPack": "./linux-sandbox-fix.js",
     "files": [
@@ -28,7 +28,7 @@
       "!main.js"
     ],
     "mac": {
-      "artifactName": "CREWSA.${ext}",
+      "artifactName": "crewsa-meet.${ext}",
       "target": [
         {
           "arch": "universal",
@@ -57,7 +57,7 @@
       "hardenedRuntime": false
     },
     "linux": {
-      "artifactName": "jitsi-meet-${arch}.${ext}",
+      "artifactName": "CREWSA-${arch}.${ext}",
       "category": "VideoConference;AudioVideo;Audio;Video;Network",
       "description": "Jitsi Meet Desktop App",
       "executableName": "CREWSA",
@@ -83,7 +83,7 @@
       ]
     },
     "win": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "crewsa-meet.${ext}",
       "target": [
         {
           "arch": [
@@ -99,10 +99,10 @@
     },
     "protocols": [
       {
-        "name": "jitsi-protocol",
+        "name": "crewsa-meet",
         "role": "Viewer",
         "schemes": [
-          "CREWSA"
+          "crewsa-meet"
         ]
       }
     ]
@@ -127,7 +127,8 @@
   "dependencies": {
     "electron-debug": "^3.2.0",
     "electron-reload": "^1.5.0",
-    "jitsi-meet-electron-utils": "github:jitsi/jitsi-meet-electron-utils#v2.0.22"
+    "jitsi-meet-electron-utils": "github:jitsi/jitsi-meet-electron-utils#v2.0.22",
+    "node-gyp": "^8.2.0"
   },
   "devDependencies": {
     "@atlaskit/button": "^10.1.3",
